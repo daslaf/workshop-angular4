@@ -1,3 +1,5 @@
+## Funciones lambda _=>_
+
 ### Notación reducida:
 
 Retorna la expresión por defecto: `return` implícito.
