@@ -12,7 +12,7 @@ console.log(todos) // [ "Bengalí", "Maine Coon" , "Ragdoll", "Blue Point" ]
 ```
 
 
-### Argumentos en una función:
+### Argumentos en una función:
 
 Consideremos la siguiente función:
 
