@@ -44,7 +44,7 @@ otroScope.foo(); // "Angora"
 otroScope.bar(); // "Bengalí"
 ```
 
-igualmente:
+Igualmente:
 
 ```
 function init() {
@@ -57,5 +57,5 @@ function init() {
 init();
 ```
 
-
+El acceso al scope léxico de las funciones _lambda_ nos permite ahorrar tiempo y hace el código más legible, ya que si quisieramos tener el mismo tipo de acceso con funciones anónimas normales, tenemos que pasar el valor de `this` esperado ya sea con `bind`, `call` o `apply`.
 
