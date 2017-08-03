@@ -1,19 +1,27 @@
-/** Arrow functions */
+this.kitten = "Angora";
 
-/** 
- * Notación reducida 
- * ---
- * Retorna la expresión por defecto: return implícito;
- */
-const foo = (arg) => arg.toUpperCase();
+const getLexicalKitten = () => {
+  console.log(this.kitten);
+}
 
-/**
- *  Equivalete a
- *  const foo = function(arg) {
- *    return arg.toUpperCase();
- *  }
- */
+const getThisKitten = function() { 
+  console.log(this.kitten); 
+}
 
-const baz = (x) => ( x );
+const otroScope = {
+  kitten: "Bengalí",
+  foo: getLexicalKitten,
+  bar: getThisKitten
+}
 
-console.log( foo('hola'), bar('adios'), baz('hey') );
+otroScope.foo(); // "Angora"
+otroScope.bar(); // "Bengalí"
+
+function init() {
+  this.kitten = "Maine Coon";
+
+  getLexicalKitten(); // "Angora"
+  getThisKitten();    // "Maine Coon"
+}
+
+init();
