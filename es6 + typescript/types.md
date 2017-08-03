@@ -138,6 +138,6 @@ En este caso ambos set de parámetros pasados cumplen con la consigna.
 
 ## Más información
 
-Existen muchos tipos avanzados en Typescript, para más información revisar la [documentación](https://www.typescriptlang.org/docs/handbook/advanced-types.html);
+Existen muchos tipos avanzados en Typescript, para más información revisar la [documentación](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
 
 
