@@ -11,6 +11,7 @@ let todos = [ "Bengalí", "Maine Coon" , ...gatos ]
 console.log(todos) // [ "Bengalí", "Maine Coon" , "Ragdoll", "Blue Point" ]
 ```
 
+
 ### Argumentos en una función:
 
 Consideremos la siguiente función:

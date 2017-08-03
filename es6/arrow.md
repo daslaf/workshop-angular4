@@ -15,7 +15,7 @@ const foo = function(arg) {
   return arg.toUpperCase();
 }
 ```
----
+
 
 ### Scope:
 
