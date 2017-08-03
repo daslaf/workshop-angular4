@@ -67,11 +67,11 @@ function ajax() {
     },
     {
       id: 2,
-      mensaje: "Banana remix 23"
+      mensaje: "Banana remix"
     },
     {
       id: 3,
-      mensaje: ""
+      mensaje: "Offramp cycle, pattern 22"
     }
   ]
 }
