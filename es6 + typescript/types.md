@@ -59,7 +59,7 @@ function request(): Promise<Array<number>> {
 ```
 
 
-### Tuplas
+### Tuplas
 
 Igualmente puede haber notación en elementos como tuplas:
 
@@ -76,7 +76,7 @@ tupla[5] = true     // ERROR, `true` no corresponde a ninguno de los tipos anter
 ```
 
 
-## Any
+### Any
 
 El tipo `any` se puede aplicar indistintamente a cualquier variable.
 
@@ -87,7 +87,7 @@ cualquiera = true;
 ```
 
 
-## Void
+### Void
 
 Al contrario de `any`, `void` se utiliza cuando una variable no tiene ningún valor. Se usa primordialmente para registrar funciones que no retornan nada. De retornar algo, el compilador arrojará un error.
 
@@ -97,7 +97,7 @@ function noVacio(): void { return 'Aquí no se retorna nada'; } // ERROR
 ```
 
 
-## Type assertions
+### Type assertions
 
 Las afirmaciones de tipo se utilizan para definir reglas de tipos que el compilador de Typescript no puede inferir. Consideremos:
 
@@ -120,7 +120,7 @@ obj.prop = "Hola";        // OK
 Este escenario se da principalmente al estar migrando código desde Javascript a Typescript.
 
 
-## Union type
+### Union type
 
 Los tipos de unión funcionan básicamente como un operador `OR`:
 
