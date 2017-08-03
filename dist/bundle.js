@@ -67,40 +67,20 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-var Persona = (function () {
-    function Persona(nombre, edad, profesion) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.profesion = profesion || new Profesion().profesion;
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
     }
-    Persona.prototype.saludar = function () {
-        return "Mi nombre es " + this.nombre + ", tengo " + this.edad + " a\u00F1os y soy " + this.profesion;
-    };
-    return Persona;
-}());
-var Profesion = (function () {
-    function Profesion() {
-    }
-    Object.defineProperty(Profesion.prototype, "profesion", {
-        get: function () {
-            return Math.round(Math.random()) ? "Alpinista" : "Catador";
-        },
-        set: function (prof) {
-            this._profesion = prof;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    ;
-    return Profesion;
-}());
-function init() {
-    var contenedor = document.getElementById("root");
-    var sujeto = new Persona("Osman", 27);
-    var saludo = sujeto.saludar();
-    contenedor.innerHTML = saludo;
-}
-init();
+    return t;
+};
+var foo = {
+    a: 97,
+    b: 98
+};
+var bar = __assign({}, foo, { c: 99 });
+console.log(bar);
 
 
 /***/ })
