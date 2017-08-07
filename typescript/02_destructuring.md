@@ -4,7 +4,7 @@
 
 La destructuración nos permite asignar variables desde las propiedades de un objeto de forma más concisa.
 
-```
+```typescript
 var gatito = {
   nombre: "Juani",
   raza: "Quiltro",
@@ -18,20 +18,20 @@ var nombre = gatito.nombre,
 
 Equivalente a:
 
-```
+```typescript
 var { nombre, maulla } = gatito;
 ```
 
 El nombre de la variable asignada debe coincidir con el de la propiedad que se quiere obtener, es posible igualmente cambiar el nombre de las variables:
 
-```
+```typescript
 var { nombre: n, maulla: m } = gatito;
 console.log(n, m);
 ```
 
 Incluso funciona para estructuras más complejas:
 
-```
+```typescript
 function ajax() {
   return {
     nombre: "Osman",
@@ -58,7 +58,7 @@ console.log( nombre, apellido, empresa );
 
 También es posible utilizar destructuración en arreglos, sólo hay que cambiar `{}` por `[]`
 
-```
+```typescript
 function ajax() {
   return [
     {

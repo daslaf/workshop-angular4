@@ -4,7 +4,7 @@
 
 El operador `...` permite inicializar parte de un arreglo literal a partir de un iterador*, tal como otro arreglo literal.
 
-```
+```typescript
 let gatos = [ "Ragdoll", "Blue Point" ];
 let todos = [ "Bengalí", "Maine Coon" , ...gatos ]
 
@@ -16,7 +16,7 @@ console.log(todos) // [ "Bengalí", "Maine Coon" , "Ragdoll", "Blue Point" ]
 
 Consideremos la siguiente función:
 
-```
+```typescript
 function presentacion( nombre, apodo, profesion ) {
   console.log(`Hola mi nombre es ${nombre}, me dicen ${apodo} y soy ${profesion}`);
 }
@@ -24,7 +24,7 @@ function presentacion( nombre, apodo, profesion ) {
 
 Podemos usar el operador spread para pasar los argumentos en un arreglo:
 
-```
+```typescript
 const argumentos = [ "Juan", "juanito", "talabartero" ];
 
 console.log( presentacion( ...argumentos ) ); 
@@ -36,7 +36,7 @@ console.log( presentacion( ...argumentos ) );
 
 Igualmente podemos usar el operador `...` con objetos, particularmente para asignar propiedades de un objeto directamente en otro:
 
-```
+```typescript
 let foo = {
   a: 97,
   b: 98
@@ -51,7 +51,7 @@ console.log( bar ); // { a: 97, b: 98, c: 99 }
 
 Este comportamiento es equivalente a `Object.assign`:
 
-```
+```typescript
 let foo = {
   a: 97,
   b: 98

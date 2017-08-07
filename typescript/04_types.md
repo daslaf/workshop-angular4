@@ -3,14 +3,14 @@
 
 ### Boolean
 
-```
+```typescript
 let bool: boolean = true;
 ```
 
 
 ### Number
 
-```
+```typescript
 let decimal: number = 6;
 let hex: number = 0xf00d;
 let binary: number = 0b1010;
@@ -20,7 +20,7 @@ let octal: number = 0o744;
 
 ### String
 
-```
+```typescript
 let color: string = "azul";
 color = 'rojo';
 
@@ -36,7 +36,7 @@ La notación `${}` permite pasar variables que se evaluan directamente dentro de
 
 En cuanto a los arreglos, existen dos tipos de notación que son equivalentes:
 
-```
+```typescript
 let arreglo1: number[] = [1, 2, 3];
 
 let arreglo2: Array<number> = [1, 2, 3];
@@ -44,17 +44,17 @@ let arreglo2: Array<number> = [1, 2, 3];
 
 Si bien ambas notaciones son equivalentes, para declarar tipos en estructuras más complejas, es preferible utilizar una u otra notación según el caso de uso, por ejemplo:
 
-```
+```typescript
 function request(): Promise<number[]> {
-  ...
+  // ...
 }
 ```
 
 Es preferible a: 
 
-```
+```typescript
 function request(): Promise<Array<number>> {
-  ...
+  // ...
 }
 ```
 
@@ -63,13 +63,13 @@ function request(): Promise<Array<number>> {
 
 Igualmente puede haber notación en elementos como tuplas:
 
-```
+```typescript
 let tupla : [ string, number ] = [ "hola", 0 ];
 ```
 
 Si se asignan propiedades a elementos fuera del rango `[ 0, 1 ]` de la tupla, Typescript aceptará valores que coincidan con alguno de los tipos ya declarados y emitirá error de ser un tipo diferente.
 
-```
+```typescript
 tuple[3] = "world"; // OK
 tupla[4] = 3.14     // OK
 tupla[5] = true     // ERROR, `true` no corresponde a ninguno de los tipos anteriores `string | number`
@@ -80,7 +80,7 @@ tupla[5] = true     // ERROR, `true` no corresponde a ninguno de los tipos anter
 
 El tipo `any` se puede aplicar indistintamente a cualquier variable.
 
-```
+```typescript
 let cualquiera: any = 0;
 cualquiera = "Hola que tal";
 cualquiera = true; 
@@ -91,7 +91,7 @@ cualquiera = true;
 
 Al contrario de `any`, `void` se utiliza cuando una variable no tiene ningún valor. Se usa primordialmente para registrar funciones que no retornan nada. De retornar algo, el compilador arrojará un error.
 
-```
+```typescript
 function vacio(): void { console.log('Aquí no se retorna nada'); }
 function noVacio(): void { return 'Aquí no se retorna nada'; } // ERROR
 ```
@@ -101,14 +101,14 @@ function noVacio(): void { return 'Aquí no se retorna nada'; } // ERROR
 
 Las afirmaciones de tipo se utilizan para definir reglas de tipos que el compilador de Typescript no puede inferir. Consideremos:
 
-```
+```typescript
 let obj = {};
 obj.prop = "Hola"; // ERROR
 ```
 
 El compilador arroja error porque el tipo inferido para `obj` es `{}`, es decir, un objeto vacío sin propiedades. Para solucionar esto, podemos hacer una afirmación de que el tipo de `obj` corresponde a una entidad con el atributo `prop`. 
 
-```
+```typescript
 interface Interfaz {
   prop: string
 }
@@ -124,7 +124,7 @@ Este escenario se da principalmente al estar migrando código desde Javascript a
 
 Los tipos de unión funcionan básicamente como un operador `OR`:
 
-```
+```typescript
 function getKittens( url: string, id: number | string ) {
   return ajax( `url/id=${id}` );
 }

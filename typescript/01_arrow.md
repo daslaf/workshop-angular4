@@ -4,13 +4,13 @@
 
 Retorna la expresión por defecto: `return` implícito.
 
-```
+```typescript
 const foo = (arg) => arg.toUpperCase();
 ```
 
 Equivalente a:
 
-```
+```typescript
 const foo = function(arg) {
   return arg.toUpperCase();
 }
@@ -23,7 +23,7 @@ La función _lambda_ tiene acceso al scope léxico. Es decir, el valor de `this`
 
 Ejemplo:
 
-```
+```typescript
 this.kitten = "Angora";
 
 const getLexicalKitten = () => {
@@ -46,7 +46,7 @@ otroScope.bar(); // "Bengalí"
 
 Igualmente:
 
-```
+```typescript
 function init() {
   this.kitten = "Maine Coon";
 
