@@ -67,20 +67,6 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-var foo = {
-    a: 97,
-    b: 98
-};
-var bar = __assign({}, foo, { c: 99 });
-console.log(bar);
 
 
 /***/ })

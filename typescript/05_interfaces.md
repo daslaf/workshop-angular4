@@ -35,7 +35,7 @@ interface fooObj {
 
 var obj1: fooObj = {
   nombre: "Hola",
-  fecha?: 123412341234
+  fecha: 123412341234
 }
 
 var obj2: fooObj = {
@@ -43,7 +43,7 @@ var obj2: fooObj = {
 }
 ```
 
-El `obj2` cumple igual con la interfaz aunque no posee el atributo `fecha`, ya que es opcional. Si bien es posible tipear objetos con menos propiedades que la interfaz, el mismo caso no se cumple para cuando la interfaz debiera chequear la existencia de sólo un par de propiedades sobre un objeto con más propiedades que la interfaz.
+El `obj2` cumple igual con la interfaz aunque no posee el atributo `fecha`, ya que es opcional. Si bien es posible tipear objetos sólo con las propiedades obligatorias de la interfaz, el mismo caso no se cumple cuando esta debiera chequear la existencia de sólo un par de propiedades sobre un objeto con más propiedades que la primera.
 
 ```typescript
 interface fooObj {
@@ -81,3 +81,34 @@ let barItem: fooObj = {
 ```
 
 Gracias a esto, el compilador reconocerá cualquier propiedad extra que escape de la definición estipulada por la interfaz.
+
+
+### Definición de funciones en una interfaz
+
+La nomenclatura para definir una interfaz de ***una*** función es la siguiente:
+
+```typescript
+interface fooFunction {
+  ( arg1: number, arg2: string ): boolean;
+}
+
+const foo: fooFunction = function( num, str ) { return true; }
+```
+
+Si queremos definir un método dentro de una interfaz más compleja bien podemos incluir la interfaz anterior en una nueva interfaz, en vez de realizar otra definición.
+
+```typescript
+interface fooObjWithMethod {
+  name: string:
+  foo: fooFunction
+} 
+```
+
+preferible a:
+
+```typescript
+interface fooObjWithMethod {
+  name: string:
+  foo: ( arg1: number, arg2: string ) => boolean;
+} 
+```

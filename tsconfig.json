@@ -5,7 +5,8 @@
     "preserveConstEnums": true,
     "outFile": "../../built/local/tsc.js",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "experimentalDecorators": true
   },
   "include": [
     "src/**/*"

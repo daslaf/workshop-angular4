@@ -1,4 +1,4 @@
-## Destructuring
+## Destructuración
 
 ### Para objetos:
 
